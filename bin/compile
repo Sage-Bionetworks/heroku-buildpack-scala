@@ -161,16 +161,6 @@ for DIR in $CACHED_DIRS; do
 done
 
 # drop useless directories from slug for play
-echo "-----> Dropping node_modules and bower_components"
-rm -rf $BUILD_DIR/public/node_modules
-rm -rf $BUILD_DIR/public/app/node_modules
-rm -rf $BUILD_DIR/public/app/bower_components
-rm -rf $BUILD_DIR/public/consent/node_modules
-rm -rf $BUILD_DIR/public/consent/bower_components
-rm -rf $BUILD_DIR/public/shared/node_modules
-rm -rf $BUILD_DIR/public/shared/bower_components
-rm -rf $BUILD_DIR/public/neurod/node_modules
-rm -rf $BUILD_DIR/public/neurod/bower_components
 
 echo "-----> Dropping vendor"
 rm -rf $BUILD_DIR/vendor
