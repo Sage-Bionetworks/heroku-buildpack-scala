@@ -162,33 +162,27 @@ done
 
 # drop useless directories from slug for play
 echo "-----> Dropping node_modules and bower_components"
-cd public
-rm -rf node_modules
-cd app
-rm -rf node_modules
-rm -rf bower_components
-cd ../consent
-rm -rf node_modules
-rm -rf bower_components
-cd ../shared
-rm -rf node_modules
-rm -rf bower_components
-cd ../neurod
-rm -rf node_modules
-rm -rf bower_components
-cd ../../
+rm -rf $BUILD_DIR/public/node_modules
+rm -rf $BUILD_DIR/public/app/node_modules
+rm -rf $BUILD_DIR/public/app/bower_components
+rm -rf $BUILD_DIR/public/consent/node_modules
+rm -rf $BUILD_DIR/public/consent/bower_components
+rm -rf $BUILD_DIR/public/shared/node_modules
+rm -rf $BUILD_DIR/public/shared/bower_components
+rm -rf $BUILD_DIR/public/neurod/node_modules
+rm -rf $BUILD_DIR/public/neurod/bower_components
 
 echo "-----> Dropping vendor"
-rm -rf vendor
+rm -rf $BUILD_DIR/vendor
 
 echo "-----> Dropping tests"
-rm -rf test
+rm -rf $BUILD_DIR/test
 
 echo "-----> Dropping docs"
-rm -rf target/universal/stage/share/doc
+rm -rf $BUILD_DIR/target/universal/stage/share/doc
 
 echo "-----> Dropping phantomdriver log"
-rm -f phantomjsdriver.log
+rm -f $BUILD_DIR/phantomjsdriver.log
 
 echo "-----> Dropping ivy cache from the slug"
 rm -rf $SBT_USER_HOME/.ivy2
