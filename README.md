@@ -4,6 +4,9 @@ Heroku buildpack: Scala [![Build Status](https://travis-ci.org/heroku/heroku-bui
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for Scala apps.
 It uses [sbt](https://github.com/harrah/xsbt/) 0.11.0+.
 
+It has been hacked to provide support for node-based JS builds within the public directory 
+of our Play Framework! application. It is not intended for general use, only for BridgePF.
+
 Usage
 -----
 
